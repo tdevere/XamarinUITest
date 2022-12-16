@@ -28,6 +28,6 @@ echo "Login to App Center"
 appcenter login --token $AppCenterTokenForTest
 
 echo "Start App Center Test Run"
-appcenter test run uitest --app $app --devices $devices --app-path $apppath --test-series $testseries --locale $locale --build-dir $builddir --uitest-tools-dir $uitesttoolsdir
+appcenter test run uitest --app $app --devices $devices --app-path $apppath --test-series $testseries --locale $locale --build-dir $builddir --uitest-tools-dir $uitesttoolsdir -v
 
 echo "The Post Build Script END"
