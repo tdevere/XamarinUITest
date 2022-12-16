@@ -30,6 +30,8 @@ appcenter login --token $AppCenterTokenForTest
 echo "Start App Center Test Run"
 echo "--app $app --devices $devices --app-path $apppath --test-series $testseries --locale $locale --build-dir $builddir --uitest-tools-dir $uitesttoolsdir"
 
-appcenter test run uitest --app "$app" --devices "$devices" --app-path "$apppath" --test-series "$testseries" --locale "$locale" --build-dir "$builddir" --uitest-tools-dir "$uitesttoolsdir" -v
+#appcenter test run uitest --app "$app" --devices "$devices" --app-path "$apppath" --test-series "$testseries" --locale "$locale" --build-dir "$builddir" --uitest-tools-dir "$uitesttoolsdir" -v
+
+appcenter test run uitest --app "AppCenterTestProjects/Xamarin_Build_Script_CLI" --devices "Xamarin_Build_Script_CLI/Samsung" --app-path "/Users/runner/work/1/a/build/com.companyname.xamarinuitest.apk" --test-series "Samples" --locale "en_US" --build-dir "/Users/runner/work/1/s/XamarinUITest/UITest/UITest/bin/Release/" --uitest-tools-dir "/Users/runner/.nuget/packages/xamarin.uitest/3.2.9/tools/" -v
 
 echo "The Post Build Script END"
