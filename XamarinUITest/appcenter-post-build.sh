@@ -10,21 +10,28 @@ fi
 
 echo "Clone UITest Repository"
 git clone https://github.com/tdevere/UITest.git
-echo "Current Directory"
-cd /Users/runner/work/1/s/
+
+echo "Current Directory and ls"
 echo $PWD
-#ls -R
-echo "Change Directory"
-cd /UITest
+ls
+
+echo "Current Directory and ls"
+cd /Users/runner/work/1/s/UITest
 echo $PWD
+ls
+
 echo "nuget Restore Package"
-nuget restore -NonInteractive /UITest.sln
+nuget restore -NonInteractive ./UITest.sln
+
 echo "Build Solution"
-xbuild /UITest.sln /p:Configuration=Release
+xbuild ./UITest.sln /p:Configuration=Release
+
 echo "List environment variables"
 printenv
+
 echo "Login to App Center"
 appcenter login --token $AppCenterTokenForTest
+
 echo "Start App Center Test Run"
 
 #note: build apk can be found at last line of build step 
