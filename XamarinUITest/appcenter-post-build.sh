@@ -11,6 +11,7 @@ fi
 echo "Clone UITest Repository"
 git clone https://github.com/tdevere/UITest.git
 echo "Current Directory"
+cd /Users/runner/work/1/s/
 echo $PWD
 #ls -R
 echo "Change Directory"
@@ -42,7 +43,7 @@ echo "--devices Xamarin_Build_Script_CLI/Samsung"
 echo "--app-path /Users/runner/work/1/a/build/com.companyname.xamarinuitest.apk"
 echo "--test-series Samples"
 echo "--locale en_US"
-echo "--build-dir "
+echo "--build-dir /Users/runner/work/1/s/XamarinUITest/bin/Debug/"
 echo "--uitest-tools-dir "
 
 
