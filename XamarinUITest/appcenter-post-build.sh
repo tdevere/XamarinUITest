@@ -16,7 +16,7 @@ echo $PWD
 ls
 
 echo "Current Directory and ls"
-cd /Users/runner/work/1/s/UITest
+cd /Users/runner/work/1/s/UITest/
 echo $PWD
 ls
 
@@ -24,7 +24,7 @@ echo "nuget Restore Package"
 nuget restore -NonInteractive ./UITest.sln
 
 echo "Build Solution"
-xbuild ./UITest.sln /p:Configuration=Release
+xbuild /Users/runner/work/1/s/UITest/UITest.sln /p:Configuration=Release
 
 echo "List environment variables"
 printenv
