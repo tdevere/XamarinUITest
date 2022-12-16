@@ -27,7 +27,7 @@ echo "nuget Restore Package"
 nuget restore -NonInteractive /Users/runner/work/1/s/XamarinUITest/UITest/UITest.sln
 
 echo "Build Solution"
-xbuild /Users/runner/work/1/s/XamarinUITest/UITest/UITest.sln /p:Configuration=Release
+msbuild /Users/runner/work/1/s/XamarinUITest/UITest/UITest.sln /p:Configuration=Release
 
 echo "List environment variables"
 printenv
