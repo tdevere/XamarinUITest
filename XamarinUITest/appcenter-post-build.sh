@@ -8,6 +8,9 @@ then
     exit
 fi
 
+echo "Current Directory and ls"
+echo $PWD
+
 echo "Clone UITest Repository"
 git clone https://github.com/tdevere/UITest.git
 
@@ -16,15 +19,15 @@ echo $PWD
 ls
 
 echo "Current Directory and ls"
-cd /Users/runner/work/1/s/UITest/
+cd /Users/runner/work/1/s/XamarinUITest/UITest/
 echo $PWD
 ls
 
 echo "nuget Restore Package"
-nuget restore -NonInteractive ./UITest.sln
+nuget restore -NonInteractive /Users/runner/work/1/s/XamarinUITest/UITest/UITest.sln
 
 echo "Build Solution"
-xbuild /Users/runner/work/1/s/UITest/UITest.sln /p:Configuration=Release
+xbuild /Users/runner/work/1/s/XamarinUITest/UITest/UITest.sln /p:Configuration=Release
 
 echo "List environment variables"
 printenv
