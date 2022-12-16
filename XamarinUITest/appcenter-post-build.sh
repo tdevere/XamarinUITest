@@ -10,11 +10,12 @@ fi
 
 echo "Clone UITest Repository"
 git clone https://github.com/tdevere/UITest.git
-echo "Recursive List Current Directory"
-ls -R
+echo "Current Directory"
+echo $PWD
+#ls -R
 echo "Change Directory"
-cd UITest
-ls
+cd /UITest
+echo $PWD
 echo "nuget Restore Package"
 nuget restore -NonInteractive /UITest.sln
 echo "Build Solution"
@@ -24,6 +25,9 @@ printenv
 echo "Login to App Center"
 appcenter login --token $AppCenterTokenForTest
 echo "Start App Center Test Run"
+
+#note: build apk can be found at last line of build step 
+#./XamarinUITest/bin/Debug/com.companyname.xamarinuitest.apk -> /Users/runner/work/1/a/build/com.companyname.xamarinuitest.apk
 
 #appcenter test run uitest 
 #--app "Examples/Android_Xamarin_UI_Test" 
@@ -35,7 +39,7 @@ echo "Start App Center Test Run"
 #--uitest-tools-dir C:\Users\antho\.nuget\packages\xamarin.uitest\3.2.2\tools
 echo "--app AppCenterTestProjects/Xamarin_Build_Script_CLI"
 echo "--devices Xamarin_Build_Script_CLI/Samsung"
-echo "--app-path"
+echo "--app-path /Users/runner/work/1/a/build/com.companyname.xamarinuitest.apk"
 echo "--test-series Samples"
 echo "--locale en_US"
 echo "--build-dir "
